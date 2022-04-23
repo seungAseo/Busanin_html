@@ -1,0 +1,50 @@
+<!-- 
+특정 위치의 자식 요소 선택하기
+- 구조 가상 클래스의 선택자
+  :only-child - 부모 안에 자식 요소가 하나뿐일 때 자식 요소를 선택함
+  A:only-type-of - 부모 안에 A 요소가 하나뿐일 때 선택함
+  :firtst-child - 부모 안에 있는 모든 요소 중에서 첫번째 자식 요소를 선택함
+  :last-child - 부모 안에 있는 모든 요소 중에서 마지막 자식 요소를 선택함
+  A:first-of-type - 부모 안에 있는 A요소 중에서 첫번째 요소를 선택함
+  A:last-of-type - 부모 안에 있는 A요소 중에서 마지막 요소를 선택함
+  :nth-child(n) - 부모 안에 있는 모든 요소 중에서 n번째 자식 요소를 선택함
+  :nth-last-child(n) -  부모 안에 있는 모든 요소 중에서 끝에서 n번째 자식 요소를 선택함
+  A:nth-of-type - 부모 안에 있는 A요소 중에서 n번째 요소를 선택함
+  A:nth-last-of-type - 부모 안에 있는 A요소 중에서 끝에서 n번째 요소를 선택함
+ -->
+ <!DOCTYPE html>
+ <html lang=ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>구조 가상 클래스</title>
+     <style>
+         .contents {
+             margin: 30px auto;
+             width: 400px;
+             padding: 20px;
+             border: 1px solid #222;
+             border-radius: 5px;
+         }
+         /* .contents의 세번째 자식 요소에 스타일 적용 */
+         .contents :nth-child(3) {
+             background-color: #ffff00;
+         }
+         /* .contents의 p요소 중에서 세번째 자식 요소에 스타일 적용 */
+         .contents p:nth-of-type(3) {
+             background-color: #00b900;
+         }
+ </style>
+
+ </head>
+ <body>
+     <div class="contents">
+         <h2>이용 안내</h2>
+         <p>이용 안내1이용 안내1이용 안내1이용 안내1</p>
+         <p>이용 안내2이용 안내2이용 안내2이용 안내2</p>
+         <h2>객실 소개</h2>
+         <p>객실 소개1객실 소개1객실 소개1객실 소개1</p>
+         <h2>예약 방법 및 요금</h2>
+         <p>예약 방법 및 요금1예약 방법 및 요금1예약 방법 및 요금1</p>
+     </div>
+ </body>
+ </html>

@@ -1,0 +1,41 @@
+<!-- 
+텍스트의 대소문자를 변환하는 text-transform 속성
+- 영문자를 표기할 때 대소문자를 원하는 대로 바꿀 수 있음
+- 한글에는 영향을 미치지 않음
+- 속성값
+   none: 줄을 표시하지 않음
+   capitalize: 첫번째 글자를 대문자로 변환
+   uppercase: 모든 글자를 대문자로 변환
+   lowercase: 모든 글자를 소문자로 변환
+   full-width: 가능한 한 모든 문자를 전각 문자로 변환
+   (전각 문자 - 가로, 세로의 길이 비율이 같은 글자
+    반각 문자 - 가로, 세로의 길이 비율이 1:2인 글자)
+ -->
+
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>텍스트의 대소문자 변환</title>
+     <style>
+         .trans1 {
+            text-transform: capitalize;
+         }
+         /* 첫번째 글자를 대문자로 */
+         .trans2 {
+            text-transform: uppercase;
+         }
+         /* 모든 글자를 대문자로 */
+         .trans3 {
+            text-transform: lowercase;
+         }
+         /* 모든 글자를 소문자로 */
+     </style>
+
+ </head>
+ <body>
+    <h1 class="trans1">html</html></h1>
+    <h1 class="trans2">css</h1>
+    <h1 class="trans3">JAVASCRIPT</h1>
+ </body>
+ </html>

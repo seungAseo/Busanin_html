@@ -1,0 +1,30 @@
+<!-- 
+전체 요소에 스타일을 적용하는 전체 선택자
+- 전체 선택자(universal selector)
+- 스타일을 문서의 모든 요소에 적용힐 때 사용
+- 선택자로 *를 사용
+- 기본형
+    * {속성: 값; ... }
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 선택자</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        /* margin은 바깥여백이라고 한다. */
+        img {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+
+</head>
+<body>
+    <img src="images/tiger.jpg" alt="호랑이">
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- 
+여러 값 중에서 특정 속성값이 포함된 속성 요소를 선택하는 [속성 ~= 값] 선택자
+- ex) [class ~= button] { ... }
+    class값 중에 button이 있는 요소
+ -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>속성 선택자</title>
+     <style>
+         ul {
+             list-style: none;
+         }
+         li {
+             display: inline-block;
+             margin: 10px;
+         }
+         li a {
+             font-size: 14px;
+             text-decoration: none;
+             color: blue;
+             padding: 5px 20px;
+         }
+        .flat {
+            background: #eee;
+            border: 1px solid #222;
+        }
+        a[class ~= "button"] {
+            box-shadow: rgba(0, 0, 0, 0.5) 4px 4px;
+            /* 그림자 지정 */
+            border-radius: 5px;
+            /* 테두리를 둥글게 */
+            border: 1px solid #222;
+        }
+     </style>
+ </head>
+ <body>
+     <ul>
+        <li>
+            <a href="#" class="flat">메뉴 1</a>
+        </li>
+        <li>
+            <a href="#" class="flat">메뉴 2</a>
+        </li>
+        <li>
+            <a href="#" class="button">메뉴 3</a>
+       </li>
+       <li>
+            <a href="#" class="flat button">메뉴 4</a>
+       </li>
+       </ul>
+ </body>
+ </html>

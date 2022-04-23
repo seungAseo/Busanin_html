@@ -1,0 +1,61 @@
+<!-- 
+열에 스타일 주는 <col>, <colgroup> 태그
+- 특정 열에 배경색을 넣거나 너비를 바꿈
+- 기본형
+    < colgroup>
+    <col>
+    <col>
+    ...
+    </colgroup>
+- <colgroup>, <col> 태그는 반드시 <caption> 태그 다음에 써야함
+ -->
+
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>표</title>
+ </head>
+ <body>
+     <h2>상품 구성</h2>
+     <table border="1">
+         <caption>선물용과 가정용 상품 구성</caption>
+         <colgroup>
+            <col style="background-color:#eee;">
+            <col>
+            <col style="width:150px;">
+            <col style="width:150px;">
+        </colgroup>
+        <tr>
+            <th>용도</th>
+            <th>중량</th>
+            <th>개수</th>
+            <th>가격</th>
+        </tr>
+        <tr>
+            <td>선물용</td>
+            <td>3kg</td>
+            <td>11과~16과</td>
+            <td>35,000원</td>
+        </tr>
+        <tr>
+            <td>선물용</td>
+            <td>5kg</td>
+            <td>18과~26과</td>
+            <td>52,000원</td>
+        </tr>
+        <tr>
+            <td>가정용</td>
+            <td>3kg</td>
+            <td>11과~16과</td>
+            <td>30,000원</td>
+        </tr>
+        <tr>
+            <td>가정용</td>
+            <td>5kg</td>
+            <td>18과~26과</td>
+            <td>47,000원</td>
+        </tr>
+        </table>
+ </body>
+ </html>

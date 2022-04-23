@@ -1,0 +1,52 @@
+<!-- 
+스타일 형식
+- 기본형
+    선택자 { 속성1: 속성값1; 속성2: 속성값2; ...}
+    ex)
+    p {
+        text-align: center;
+        color: blue;
+    }
+    p: 선택자
+    text-align: 텍스트 정렬 속성
+    color: 글자색 속성
+    center, blue: 값
+    
+스타일 시트
+- 스타일 규칙을 한군데 묶어 놓은 것
+- 브라우저 기본 스타일
+  사용자 스타일
+  (인라인 스타일, 내부 스타일 시트, 외부 스타일 시트)
+
+간단한 스타일 정보를 적용하는 인라인 스타일
+- style속성을 사용해 style="속성: 속성값;" 형태로 지정
+- ex) <p style="color: blue;"></p> (여러 값이 올 수 있다)
+
+스타일을 여러 곳에 적용할 때 쓰는 내부 스타일 시트
+- <head> 태그 안에 정의하고 <style></style> 태그 사이에 작성함
+- ex) h1 {
+        padding: 10px;
+        background-color:#222;
+        color: #fff;
+}
+
+스타일 정보를 따로 저장해 놓은 외부 스타일 시트
+- 스타일을 별도 파일로 저장해 놓고 필요할 때 가져와서 사용
+- *.css라는 확장자를 사용
+- 기본형
+    <link rel="stylesheet" href="외부 스타일 시트 파일 경로">
+ -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>스타일, 스타일 시트</title>
+     <link rel="stylesheet" href="css/style.css">
+ </head>
+ <body>
+     <h1>레드향</h1>
+     <p>껍질에 붉은 빛이 돌아 레드향이라고 불린다.</p>
+     <p>껍질에 붉은 빛이 돌아 레드향이라고 불린다.</p>
+     <p>껍질에 붉은 빛이 돌아 레드향이라고 불린다.</p>
+ </body>
+ </html>

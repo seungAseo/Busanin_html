@@ -1,0 +1,46 @@
+<!-- 
+수식을 사용해 위치 지정하기
+/*div 요소에서 세번째 자식인 p요소에 스타일 적용*/
+div p:nth-child(3)
+/*div 요소에서 홀수번째로 나타나는 자식인 p요소에 스타일 적용*/
+div p:nth-child(odd), div p:nth-child(2n+1)
+/*div 요소에서 짝수번째로 나타나는 자식인 p요소에 스타일 적용*/
+div p:nth-child(even), div p:nth-child(2n)
+ -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>가상 클래스에 수식 사용</title>
+     <style>
+         /* 홀수번째 열만 스타일 적용 */
+         table tr:nth-of-type(2n) {
+             background: lightgray;
+             color: black;
+         }
+     </style>
+ </head>
+ <body>
+     <div id="container">
+         <h1>웹 개발</h1>
+         <table>
+             <tr>
+                 <td>HTML</td>
+             </tr>
+             <tr>
+                 <td>CSS</td>
+             </tr>
+             <tr>
+                 <td>자바스크립트</td>
+             </tr>
+             <tr>
+                 <td>React</td>
+             </tr>
+             <tr>
+                 <td>node.js</td>
+             </tr>
+         </table>
+     </div>
+     
+ </body>
+ </html>

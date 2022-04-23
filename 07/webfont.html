@@ -1,0 +1,46 @@
+<!-- 
+웹폰트
+- 사용자 시스템에 없는 글꼴도 사용할 수 있게 해줌
+- 사용자 시스템에 없는 글꼴은 사용자 시스템으로 다운로드 받은 후 표시
+- 글꼴 확장자: EOT(embedded open type)
+              WOFF(web open font format)
+              WOFF2
+
+- 기본형
+    @font-face {
+        font-family: <글꼴 이름>;
+        src: <글꼴 파일>[<글꼴 파일>, <글꼴 파일>, ...];
+    }
+    src: 사용할 글꼴 파일의 경로를 지정
+         경로를 지정하기 전에 local()문을 사용해서 사용자 시스템에 해당 글꼴이 있는지 먼저 확인해야함
+ -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>웹폰트</title>
+     <style>
+         @font-face {
+             font-family: 'Ostrich';
+             src: local('Ostrich Sans'),
+             url('fonts/ostrich-sans-bold.woff') format('woff'),
+             url('fonts/ostrich-sans-bold.woff') format('truetype'),
+             url('fonts/ostrich-sans-bold.woff') format('svg');
+            }
+        .wfont {
+            font-family: 'Ostrich', sans-serif;
+            /* 웹 폰트 지정 */
+        }
+        p {
+            font-size: 30px;
+            /* 글자 크기 지정 */
+        }
+        
+     </style>
+ </head>
+ <body>
+     <p>Using Default Fonts</p>
+     <p class="wfont">Using Default Fonts</p>
+
+ </body>
+ </html>

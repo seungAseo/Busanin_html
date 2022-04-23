@@ -1,0 +1,64 @@
+<!-- 
+여러 줄을 입력하는 텍스트 영역 <textarea>
+- 기본형
+    <textarea>내용</textatrea>
+- 속성
+    cols: 텍스트 영역의 가로 너비를 지정
+    rows: 텍스트 영역의 세로 길이를 지정
+          지정한 숫자보다 줄 개수가 많아지면 스크롤 막대가 생김
+
+드롭다운 목록을 만들어주는 <select>, <option> 태그
+- 사용자가 내용을 직접 입력하지 않고 선택하게 하는 태그
+- 기본형
+    <select>
+        <option value="값1">내용1</option>
+        <option value="값2">내용2</option>
+        ...
+    </select>
+- <select> 태그의 속성
+  size: 화면에 표시할 드롭다운 항목의 개수를 지정
+  multiple: 둘 이상의 항목을 선택할 때 사용
+- <option> 태그의 속성
+  value: 선택할 때 서버로 넘겨줄 값을 지정
+  selected: 기본적으로 선택해서 보여 줄 항목을 지정
+
+  데이터 목록을 만들어 주는 <datalist>, <option> 태그
+- 텍스트 필드에 값을 직접 입력하지 않고 미리 만들어 놓은 값 중에서 선택
+- 기본형
+    <input type="text" list="데이터 목록 id">
+    <datalist id="데이터 목록 id">
+        <option value="서버로 넘길 값1">선택 옵션1</option>
+        <option value="서버로 넘길 값2">선택 옵션2</option>
+        ...
+    </datalist>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>폼에서 사용하는 여러 가지 태그</title>
+ </head>
+ <body>
+     <form>
+        <label for="memo">메모</label>
+        <textarea id="memo" cols="40" rows="4"></textarea>
+        <br>
+        <label for="prod1">상품 선택</label>
+        <select id="prod1">
+            <option value="special_3" selected>선물용 3kg</option>
+            <option value="special_5">선물용 5kg</option>
+            <option value="family_3">가정용 3kg</option>
+            <option value="family_5">가정용 5kg</option>
+        </select>
+        <br>
+        <label for="prod2">포장 여부</label>
+        <input type="text" id="prod2" list="pack">
+        <datalist id="pack">
+            <option value="package">선물 포장</option>
+            <option value=" no package">포장 안함</option>
+        </datalist>
+        </label>
+     </form>
+ </body>
+ </html>

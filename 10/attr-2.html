@@ -1,0 +1,44 @@
+<!-- 
+특정 속성값이 있는 요소를 선택하는 [속성 = 속성값] 선택자
+- 주어진 속성과 속성값이 일치하는 요소를 찾아 스타일을 지정
+- ex) a[target = _blank] { ... }
+      <a target = "_blank">인 요소
+ -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>속성 선택자</title>
+     <style>
+         ul {
+             list-style: none;
+         }
+         li {
+             padding: 5px 30px;
+         }
+         li a {
+             font-size: 16px;
+             text-decoration: none;
+             color: #000;
+         }
+         a[target = "_blank"] {
+             /* target 속성값이 _blank인 a요소를 선택하는 선택자 */
+             padding-right: 30px;
+             background: yellow;
+         }
+     </style>
+ </head>
+ <body>
+    <ul>
+        <li>
+            <a href="https://html.spec.whatwg.org" target="_blank">HTML</a>
+        </li>
+        <li>
+            <a href="https://www.w3.org/TR/selectors">CSS Selector Level 3</a>
+        </li>
+        <li>
+            <a href="https://www.w3.org/TR/css3-mediaqueries">미디어 쿼리</a>
+        </li>
+    </ul>
+ </body>
+ </html>

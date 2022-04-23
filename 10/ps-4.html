@@ -1,0 +1,40 @@
+<!-- 
+가상 요소
+- 문서 안의 특정 부분에 스타일을 지정하기 위해 가상으로 요소를 만들어 추가함
+- 가상 요소 이름 앞에 콜론 2개(;;)를 붙여서 표시함
+
+첫번째 줄, 첫번째 글자에 스타일을 적용하는
+'::first-line요소, ::first-letter요소'
+
+내용 앞뒤에 콘텐츠를 추가하는 '::before 요소, ::after 요소'
+ -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>가상 요소</title>
+     <style>
+         .new::after {
+             content: "NEW!!";
+             font-size: x-small;
+             padding: 2px 4px;
+             margin: 0 10px;
+             border-radius: 2px;
+             background: #f00;
+             color: #fff;
+         }
+     </style>
+
+ </head>
+ <body>
+     <div class="container">
+         <h1>제품 목록</h1>
+         <ul>
+             <li class="new">제품 A</li>
+             <li>제품 B</li>
+             <li>제품 C</li>
+             <li class="new">제품 D</li>
+         </ul>
+     </div>
+ </body>
+ </html>

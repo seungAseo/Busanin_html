@@ -1,0 +1,50 @@
+<!-- 
+박스 모델에 그림자 효과를 주는  box-shadow 속성
+- 그림자의 위치, 생상, 흐림 정도 등을 지정
+- 기본형
+    box-shadow: <수평 거리> <수직 거리> <흐림 정도><색상> inset
+- 속성값
+    <수평 거리>: 그림자가 가로로 얼마나 떨어져 있는지 나타냄
+    양수값은 요소의 오른쪽, 음수값은 요소의 왼쪽에 그림자를 만듬
+    필수 속성.
+    <수직 거리>: 그림자가 세로로 얼마나 떨어져 있는지 나타냄
+    양수값은 요소의 아래쪽, 음수값은 요소의 위쪽에 그림자를 만듬
+    필수 속성
+    <흐림 정도>: 생략하면 0을 기본값으로 하여 진한 그림자를 표시
+    값이 커질수록 부드러운 그림자를 표시, 음수값은 사용할 수 없음
+    <번짐 정도>: 양수값을 사용하면 모든 방향으로 그림자가 퍼져서 박스보다 그림자가 크게 표시됨
+    음수값은 모든 방향으로 그림자가 축소되어 보임
+    기본값은 0
+    <색상>: 한가지 또는 여러 개의 색상을 지정 할 수 있음 기본값은 검은색 
+    inset: 이 키워드를 함께 표시하면 안쪽 그림자로 그림  
+ -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>박스 모델 그림자 효과</title>
+     <style>
+         div {
+             width: 200px;
+             height: 100px;
+             display: inline-block;
+             margin: 15px;
+             border: 1px solid blue;
+             border-radius: 20px;
+         }
+        .box1 { 
+            box-shadow: 2px -2px 5px 0px;
+            /* 오른쪽 윗부분에 그림자 */
+        }
+        .box2 {
+            box-shadow: 5px 5px 15px 5px blue;
+            /* 오른쪽 아래부분에 파란색 그림자 */
+        }
+     </style>
+
+ </head>
+ <body>
+     <div class="box1"></div>
+     <div class="box2"></div>
+ </body>
+ </html>

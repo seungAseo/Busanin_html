@@ -1,0 +1,62 @@
+<!-- 
+전송, 리셋 버튼을 나타내는 type="submit", type="reset"
+- submit: 폼에 입력한 정보를 서버로 전송
+  reset: <input> 요소에 입력된 모든 정보를 지우는 역할
+- 기본형
+    <input type="submit" | reset " value="버튼에 표시할 내용">
+
+기본 버튼을 나타내는 type="button"
+- 기능은 없고 오직 버튼 형태만 삽입
+- 주로 버튼을 클릭해서 자바스크립트를 실행할 때 사용
+- 기본형
+    <input type="button" value="버튼에 표시할 내용">
+ -->
+
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>버튼</title>
+ </head>
+ <body>
+     <form>
+         <fieldset>
+             <legend>배송 정보</legend>
+             <ul>
+                <li>
+                     <label for="user=name">이름</label>
+                     <input type="text" id="user-name">
+                </li>
+                <li>
+                    <label for="addr">배송 주소</label>
+                    <input type="text" id="addr">
+                </li>
+                <li>
+                    <label for="mail">이메일</label>
+                    <input type="email" id="mail">
+                </li>
+                <li>
+                    <label for="phone">연락처</label>
+                    <input type="tel" id="phone">
+                </li>
+                <li>
+                    <label for="d-day">배송 지정</label>
+                    <input type="date" id="d-day">
+                    <small>(주문일로부터 최소 3일 이후)</small>
+                </li>
+                <li>
+                    <label for="memo">메모</label>
+                    <textarea id="phone" cols="40" rows="4"></textarea>
+                </li>
+             </ul>
+
+            </fieldset>
+         <div>
+             <input type="submit" value="주문하기">
+             <input type="reset" value="취소하기">
+             <input type="button" value="페이지 열기"
+                onclick="alert('열기');">
+         </div>
+     </form>
+ </body>
+ </html>

@@ -1,0 +1,37 @@
+<!-- 
+폼(form)
+- 아이디, 비밀번호를 입력하거나 로그인 버튼, 회원 가입 등 사용자가 웹 사이트로 정보를 보낼 수 있는 요소는 모두 폼이라고 할 수 있음
+
+폼을 만드는 <form> 태그
+- 기본형
+    <form [속성="속성값"]>여러 폼 요소</form>
+- <form> 태그의 속성
+    method : 사용자가 입력한 내용을 서버 쪽 프로그램으로 어떻게 넘겨줄 것인지 지정
+            get, post 방식이 있음
+    name : 자바스크립트로 폼을 제어할 때 사용할 폼의 이름을 지정
+    action : <form> 태그 안의 내용을 처리해 줄 서버 프로그램을 지정
+    target : action 속성에서 지정한 스크립트 파일을 현재 창이 아닌 다른 위치에서 열도록 함.
+
+자동 완성 기능을 나타내는 autocomplete 속성
+- 예전에 입력한 내용을 자동으로 표시해 주는 것
+- 기본 속성값은 "on"
+    <form action="" autocomplete="off">
+    
+ -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>Form</title>
+ </head>
+ <body>
+     <form name="frmTest" action="">
+         <p>아이디 : <input type=" text"></p>
+         <p>비밀번호 : <input type="password"></p>
+         <input type="submit" value="회원가입">
+         <input type="reset" value="취소">
+         <!-- 서버에서 작업을 해줘야지 버튼이 작성을 한다. -->
+        
+     </form>
+ </body>
+ </html>

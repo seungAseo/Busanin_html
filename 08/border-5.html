@@ -1,0 +1,37 @@
+<!-- 
+둥근 테두리를 만드는 border-radius 속성
+- 원의 반지름(radius)를 이용해 둥근 정보도를 나타남
+- 기본형
+    border-radiusL <크기> | <백분율>
+- 속성값
+    <크기>: 반지름 크기를 px, em읟 나위와 함께 수치로 표시
+    <백분율>: 현재 요소의 크기를 기준으로 비율(%)로 지정
+- 원 형태로 만들기 위해서는 width(너비)값의 반을 적거나 50%를 적으면 됨
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테두리 스타일</title>
+    <style>
+        img {
+            width: 300px;
+            height: 200px
+        }
+        #round { 
+            border-radius: 25px;
+        }
+        #circle {
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="images/tiger.jpg">
+    <img id="round" src="images/tiger.jpg">
+    <img id="circle" src="images/tiger.jpg">
+    
+</body>
+</html>

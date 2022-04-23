@@ -1,0 +1,48 @@
+<!-- 
+요소 주변의 여백을 설정하는 margin 속성
+- 마진(margin)은 요소 주변의 여백, 두 박스 모델 사이의 여백을 의미함
+- 기본형
+    margin: <크기> | <백분율> | auto
+- 속성값
+    <크기> : 너비값이나 높이값을 px, em같은 단위와 함께 수치로 지정
+    <백분율> : 부모 요소를 기준으로 너비값이나 높이값을 퍼센트(%)로 지정
+    auto : display 속성에서 지정한 값에 맞게 적절한 값을 자동으로 지정
+ -->
+
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>여백 조절</title>
+     <style>
+         div {
+             width: 200px;
+             height: 100px;
+             display: inline-block;
+             border: 1px solid #222             
+         }
+         #margin1 {
+             margin: 50px;
+         }
+         /* 상하좌우 4개 방향 마진 모두 50px */
+         #margin2 {
+             margin: 30px 50px;
+         }
+         /* 위아래 마진 30px 좌우 마진 50px */
+         #margin3 {
+             margin: 30px 20px 50px;
+             /* 위 마진 30px, 좌우 마진 20px, 아래 마진 50px */
+         }
+         #margin4 {
+             margin: 30px 50px 30px 50px;
+             /* 위아래 마진 30px, 좌우 마진 50px */
+         }
+     </style>
+ </head>
+ <body>
+     <div id="margin1"></div>
+     <div id="margin2"></div>
+     <div id="margin3"></div>
+     <div id="margin4"></div>
+ </body>
+ </html>

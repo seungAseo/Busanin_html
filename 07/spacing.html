@@ -1,0 +1,43 @@
+<!-- 
+글자 간격을 조절하는 letter-spacing, word-spacing 속성
+- letter-spacing: 글자와 글자 사이의 간격을 조절
+  word-spacing: 단어와 단어 사이의 간격을 조절
+- px, em과 같은 단위, 퍼센트(%)로 크기값을 조절
+ -->
+
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>글자 간격 조절</title>
+     <style>
+         .spacing1 {
+            letter-spacing:0.2em;
+            /* 글자 간격 0.2em */
+         }
+         .spacing2 {
+            letter-spacing:0.5em;
+            /* 글자 간격 0.5em */
+         }
+         
+         .W-spacing1 {
+            word-spacing:0.2em;
+            /* 글자 간격 0.2em */
+         }
+         .W-spacing2 {
+            word-spacing:0.5em;
+            /* 글자 간격 0.5em */
+         }
+     </style>
+
+ </head>
+ <body>
+    <p>CSS</p>
+    <p class="spacing1">CSS</p>
+    <p class="spacing2">CSS</p>
+    <hr>
+    <p>CSS JAVASCRIPT</p>
+    <p class="W-spacing1">CSS JAVASCRIPT</p>
+    <p class="W-spacing2">CSS JAVASCRIPT</p>
+ </body>
+ </html>

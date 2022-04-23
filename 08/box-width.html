@@ -1,0 +1,36 @@
+<!-- 
+콘텐츠 영역의 크기를 지정하는 width, height
+- width, height에 사용할 수 있는 속성값
+    <크기>: 너비나 높이의 값을 px이나 em단위로 지정
+    <백분율>: 박스 모델을 포함하는 부모 요소를 기준으로 너비값이나 높이값을 백분율(%)로 지정
+    auto: 박스 모델의 너비값과 높이값이 콘텐츠 양에 따라 자동으로 결정됨
+    기본값
+ -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>콘텐츠 영역 크기</title>
+     <style>
+         .box1 {
+             width: 400px;
+             /* 고정 너비 */
+             height: 100px;
+             /* 고정 높이 */
+             background-color: red;
+         }
+         .box2 {
+             width: 50%;
+             /* 가변 너비 - 웹 브라우저의 50% */
+             height: 100px;
+             /* 고정 높이 */
+             background-color: blue;
+         }
+     </style>
+
+ </head>
+ <body>
+     <div class="box1"></div>
+     <div class="box2"></div>
+ </body>
+ </html>

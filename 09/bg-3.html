@@ -1,0 +1,81 @@
+<!-- 
+배경 이미지의 적용 범위를 조절하는 background-orign 속성
+- 속성값
+    content-box: 박스 모델에서 내용 부분에만 배경 이미지를 표시
+    padding-box: 박스 모델에서 패딩까지 배경 이미지를 표시
+    border-box: 박스 모델에서 테두리까지 베경 이미지를 표시
+
+배경 이미지를 고정하는 background-attachment 속성
+- 속성값
+    scroll: 화면을 스크롤하면 배경 이미지도 스크롤됨. 기본값
+    fixed: 화면을 스크롤하면 배경 이미지는 고정되고 내용만 스크롤 됨
+ -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>배경 이미지</title>
+     <style>
+         body {
+            background-image: url('images/bg2.png');
+            /* 문서 전체 배경 이미지 */
+            background-repeat: no-repeat;
+            /* 배경 이미지 반복 안함 */
+            background-position: right top;
+            /* 배경 이미지 오른쪽 상단에 위치 */
+            background-attachment: fixed;
+            /* 배경 이미지 고정 */
+            /* background: url('images//bg2.png') no-repeat right top fixed; 위에 4개가 하나로 합쳐지는 방법으로 써도 됨*/
+         }
+         div {
+            width: 400px;
+            height: 250px;
+            padding: 20px;
+            border: 20px solid rgba(204, 204, 204, 0.493);
+            margin-bottom: 20px;
+            overflow: auto;
+            background-image: url('images/bg3.png');
+            /* 텍스트 상자의 배경 이미지 */
+            background-repeat: no-repeat;
+            /* 배경 이미지 반복 안함 */
+            background-position: right top;
+            /* 배경 이미지를 오른쪽 상단에 위치시킴 */
+         }
+         #bg1 {
+            background-origin: padding-box;
+            /* 패딩까지 배경 이미지 표시 */
+         }
+         #bg2 {
+             background-origin: border-box;
+             /* 테두리까지 배경 이미지 표시 */
+            }
+         #bg3 {
+            background-origin: content-box;
+            /* 내용 영역에만 배경 이미지 표시 */
+            }
+     </style>
+ </head>
+ <body>
+     <div id="bg1">
+         <h2>바빠 시리즈</h2>
+         <h3>-바쁜 학생을 위한 빠른 학습법</h3>
+         <p>쉬운 내용을 압축하여 빠르게, 어려운 내용을 더 많이 공부하는
+            효육적인 학습 설계가 되어있는 바빠 연산법과 '손이 기억하는 훈련
+            프로그램'인 바빠 영어 시리즈가 있습니다.</p>
+     </div>
+     <div id="bg2">
+        <h2>바빠 시리즈</h2>
+        <h3>-바쁜 학생을 위한 빠른 학습법</h3>
+        <p>쉬운 내용을 압축하여 빠르게, 어려운 내용을 더 많이 공부하는
+           효육적인 학습 설계가 되어있는 바빠 연산법과 '손이 기억하는 훈련
+           프로그램'인 바빠 영어 시리즈가 있습니다.</p>
+    </div>
+    <div id="bg3">
+        <h2>바빠 시리즈</h2>
+        <h3>-바쁜 학생을 위한 빠른 학습법</h3>
+        <p>쉬운 내용을 압축하여 빠르게, 어려운 내용을 더 많이 공부하는
+           효육적인 학습 설계가 되어있는 바빠 연산법과 '손이 기억하는 훈련
+           프로그램'인 바빠 영어 시리즈가 있습니다.</p>
+    </div>
+ </body>
+ </html>

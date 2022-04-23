@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+</head>
+<body>
+    <h1>회원 가입을 환영합니다</h1>
+    <form>
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <ul>
+                <li>
+                    <label for="id">아이디</label>
+                    <input type="text" id="id" required>
+                    </label>
+                </li>
+                <li>
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" required>
+                </li>
+                
+                <li>
+                    <label>
+                        <label for="password">비밀번호</label>
+                    <input type="password" id="password" required>
+                    </label>
+                </li>
+                <li>
+                    <label for="password_con">비밀번호 확인</label>
+                    <input type="text" id="password_con" required>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>이벤트와 새로운 소식</legend>
+            <label>
+                <input type="radio" name="mail" value="yes">메일 수신
+            </label>
+            <label>
+               <input type="radio" name="mail" value="no">메일 수신 안함
+           </label>
+        </fieldset>
+        <fieldset>
+            <legend>가입 경로</legend>
+            <label><input type="checkbox" value="sns">SNS</label>
+            <label><input type="checkbox" value="hp">홈페이지</label>
+            <label><input type="checkbox" value="cafe">카페</label>
+            <label><input type="checkbox" value="etc">기타</label>
+        </fieldset>
+        <div id="buttons">
+            <input type="submit" value="가입하기">
+            <input type="reset" value="취소">
+        </div>
+    </form>
+    
+    <table border="1">
+        
+        <tr>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>주소</th> 
+        </tr>
+       <tr>
+           <td>test1</td>
+           <td>홍길동</td>
+           <td>부산</td>
+       </tr>
+       <tr>
+        <td>test2</td>
+        <td>김연아</td>
+        <td rowspan="2">서울</td>
+    </tr>
+    <tr>
+        <td>test3</td>
+        <td>박지성</td>
+    </tr>
+    </table>
+</body>
+</html>

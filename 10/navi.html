@@ -1,0 +1,77 @@
+<!-- 
+사용자의 동작에 반응하는 가상 클래스
+1. 방문하지 않은 링크에 스타일을 적용하는 ':link 가상 클래스 선택자'
+
+2. 방문한 링크에 스타일을 적용하는 ':visited 가상 클래스 선택자'
+
+3. 틀정 요소에 마우스 포인터를 올려 놓으면 스타일을 적용하는 ':hover 가상 클래스 선택자'
+
+4.  웹 요소를 활성화했을 때 스타일을 적용하는 ':active 가상 클래스 선택자'
+
+5. 웹 요소에 초점이 맞추어졌을 때 스타일을 적용하는 ':focus 가상 클래스 선택자'
+1~4의 가상 클래스 선택자는 아래 순서가 바뀌면 스타일을 정의하더라도 제대로 적용되지 않음
+1. :link 2. :visited 3. :hover 4. :active
+ -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>가상 클래스</title>
+     <style>
+         .container {
+             width: 960px;
+             margin: 0 auto;
+         }
+         .navi {
+             width: 960px;
+             height: 60px;
+             padding-bottom: 10px;
+             border-bottom: 2px solid #ccc;
+         }
+         .navi ul {
+             list-style: none;
+             padding-top: 10px;
+             padding-bottom: 5px;
+         }
+         .navi ul li{
+             float: left;
+             width: 150px;
+             padding: 10px;
+         }
+         /* 방문한 링크와 방문하지 않은 링크 설정 */
+         .navi a:link, .navi a:visited {
+             display: block;
+             font-size: 14px;
+             color: #000;
+             padding: 10px;
+             text-decoration: none;
+             /* 밑줄을 없앰 */
+            text-align: center;
+         }
+         
+         /* 마우스 포인터를 올렸을 때와 초점을 맞췄을 때 설정 */
+         .navi a:hover, .navi a:focus {
+            background-color: #222;
+            color: #fff;
+         }
+         .navi a :active {
+             background-color: #f00;
+         }
+
+
+         
+     </style>
+ </head>
+ <body>
+     <div class="container">
+         <nav class="navi">
+             <ul>
+                 <li><a hrdf="#">이용 안내</a></li>
+                 <li><a hrdf="#">객실 소개</a></li>
+                 <li><a hrdf="#">예약 방법 및 요금</a></li>
+                 <li><a hrdf="#">예약하기</a></li>
+             </ul>
+         </nav>
+     </div>
+ </body>
+ </html>

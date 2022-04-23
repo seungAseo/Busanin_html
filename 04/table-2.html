@@ -1,0 +1,51 @@
+<!-- 
+표의 구조를 지정하는 <thead>, <tbody>, <tfoot>태그
+-제목(head), 본문(body), 요약(foot)으로 구성
+- 표의 구조를 지정하면 시각 장애인도 화면 낭독기를 통해 표를 쉽게 이해할 수 있음
+ -->
+
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <title>표</title>
+ </head>
+ <body>
+     <table border="1">
+        <caption>객실</caption> 
+        <thead>
+            <tr>
+                <th>방 이름</th>
+                <th>대상</th>
+                <th>크기</th>
+                <th>가격</th>
+            </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td>유채방</td>
+                 <td>여성 도미토리</td>
+                 <td rowspan="3">3인실</td>
+                 <td>1인 50,000원</td>
+             </tr>
+             <tr>
+                <td>동백방</td>
+                <td>동성 도미토리</td>
+                <td>1인 40,000원</td>
+            </tr>
+            <tr>
+                <td>천혜향방</td>
+                <td>-</td>
+                <td>1인 20,000원</td>
+            </tr>
+         </tbody>
+         <tfoot>
+             <tr>
+                 <td colspan="4">
+                    바깥채 전체를 렌트합니다.
+                 </td>
+             </tr>
+         </tfoot>
+     </table>
+ </body>
+ </html>
